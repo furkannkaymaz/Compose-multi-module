@@ -6,12 +6,18 @@ plugins {
 }
 
 android {
-    namespace = "com.furkan.multi_module.presentation"
+    namespace = "${Config.applicationId}.presentation"
     compileSdk = Config.compileSdkVersion
 
 
     buildFeatures {
         compose = true
+    }
+
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+        kotlinOptions {
+            jvmTarget = "11"
+        }
     }
 
     composeOptions {

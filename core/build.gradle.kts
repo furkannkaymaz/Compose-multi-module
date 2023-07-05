@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "${Config.applicationId}.data"
+    namespace = "${Config.applicationId}.core"
     compileSdk = Config.compileSdkVersion
 
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
@@ -19,14 +19,7 @@ android {
 
 dependencies {
 
-    implementation(Libs.AndroidX.core)
-    implementation(Libs.AndroidX.datastore)
-
     implementation(Libs.Hilt.hilt)
     kapt(Libs.Hilt.hiltKapt)
-
-    implementation(Libs.Room.room)
-    implementation(Libs.Room.roomKtx)
-    ksp(Libs.Room.roomCompiler)
 
 }

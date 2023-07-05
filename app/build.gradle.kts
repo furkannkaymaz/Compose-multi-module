@@ -60,6 +60,9 @@ dependencies {
     //Project
     implementation(project(Modules.data))
     implementation(project(Modules.presentation))
+    implementation(project(Modules.core))
+    implementation(project(Modules.domain))
+    implementation(project(Modules.network))
 
     //Androidx
     implementation(Libs.AndroidX.activityCompose)

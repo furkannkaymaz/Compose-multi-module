@@ -16,3 +16,6 @@ rootProject.name = "Compose-multi-module"
 include(":app")
 include(":data")
 include(":presentation")
+include(":network")
+include(":domain")
+include(":core")
