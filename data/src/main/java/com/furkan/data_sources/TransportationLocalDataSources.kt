@@ -5,6 +5,7 @@ import com.furkan.core.di.DispatcherModule
 import com.furkan.model.TransportationModel
 import com.furkan.readDataFromAssets
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
@@ -16,10 +17,11 @@ class TransportationLocalDataSources @Inject constructor(
     @DispatcherModule.IODispatcher private val ioDispatcher: CoroutineDispatcher
 ) {
     suspend fun getTransportationList(): TransportationModel {
-        return withContext(ioDispatcher) {
-            val jsonString = readDataFromAssets(context, "transportation.json")
-            val transportationData = gson.fromJson(jsonString, TransportationModel::class.java)
-            transportationData
+        return withContext(ioDispatcher){
+            gson.fromJson(
+                readDataFromAssets(context, "transportation.json"),
+                object : TypeToken<TransportationModel>() {}.type
+            )
         }
     }
 }
