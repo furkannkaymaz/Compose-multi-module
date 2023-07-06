@@ -10,11 +10,6 @@ android {
     namespace = "${Config.applicationId}.domain"
     compileSdk = Config.compileSdkVersion
 
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-        kotlinOptions {
-            jvmTarget = "11"
-        }
-    }
 }
 dependencies {
 

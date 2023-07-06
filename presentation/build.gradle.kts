@@ -14,11 +14,6 @@ android {
         compose = true
     }
 
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-        kotlinOptions {
-            jvmTarget = "11"
-        }
-    }
 
     composeOptions {
         kotlinCompilerExtensionVersion =  Versions.Others.kotlinCompilerExtensionVersion
@@ -27,6 +22,8 @@ android {
 }
 
 dependencies {
+
+    implementation(project(Modules.domain))
 
     //Androidx
     implementation(Libs.AndroidX.activityCompose)

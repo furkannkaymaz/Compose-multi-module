@@ -1,0 +1,34 @@
+{
+  "transportation": [
+    {
+      "type": "Bus",
+      "usageFrequency": "High",
+      "environmentalContribution": "Low",
+      "speedAdvantage": "Low"
+    },
+    {
+      "type": "Train",
+      "usageFrequency": "Medium",
+      "environmentalContribution": "High",
+      "speedAdvantage": "High"
+    },
+    {
+      "type": "Car",
+      "usageFrequency": "High",
+      "environmentalContribution": "Low",
+      "speedAdvantage": "Medium"
+    },
+    {
+      "type": "Walking",
+      "usageFrequency": "Low",
+      "environmentalContribution": "High",
+      "speedAdvantage": "Low"
+    },
+    {
+      "type": "Bicycle",
+      "usageFrequency": "Medium",
+      "environmentalContribution": "High",
+      "speedAdvantage": "Medium"
+    }
+  ]
+}

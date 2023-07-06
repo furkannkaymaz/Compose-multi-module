@@ -1,6 +1,7 @@
 package com.furkan.network.di
 
 import androidx.viewbinding.BuildConfig
+import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -37,5 +38,11 @@ object NetworkModule {
         OkHttpClient
             .Builder()
             .build()
+    }
+
+    @Singleton
+    @Provides
+    fun provideGson(): Gson {
+        return Gson()
     }
 }

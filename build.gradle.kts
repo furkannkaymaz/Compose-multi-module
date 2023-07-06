@@ -5,3 +5,11 @@ plugins {
     id(Plugins.hiltClasspath) version Versions.hilt apply false
     id(Plugins.ksp) version Versions.Plugin.ksp apply false
 }
+
+allprojects {
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions {
+            jvmTarget = "1.8"
+        }
+    }
+}

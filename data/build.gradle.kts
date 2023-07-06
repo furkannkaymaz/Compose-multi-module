@@ -10,14 +10,13 @@ android {
     namespace = "${Config.applicationId}.data"
     compileSdk = Config.compileSdkVersion
 
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-        kotlinOptions {
-            jvmTarget = "11"
-        }
-    }
 }
 
 dependencies {
+
+    implementation(project(Modules.domain))
+    implementation(project(Modules.network))
+    implementation(project(Modules.core))
 
     implementation(Libs.AndroidX.core)
     implementation(Libs.AndroidX.datastore)
