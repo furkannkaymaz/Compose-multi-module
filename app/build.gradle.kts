@@ -51,6 +51,8 @@ dependencies {
     implementation(project(Modules.core))
     implementation(project(Modules.domain))
     implementation(project(Modules.network))
+    implementation(project(Modules.local))
+    implementation(project(Modules.utils))
 
     //Androidx
     implementation(Libs.AndroidX.activityCompose)

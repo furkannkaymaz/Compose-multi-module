@@ -29,6 +29,36 @@
       "usageFrequency": "Medium",
       "environmentalContribution": "High",
       "speedAdvantage": "Medium"
+    },
+    {
+      "type": "Motorcycle",
+      "usageFrequency": "Medium",
+      "environmentalContribution": "Low",
+      "speedAdvantage": "High"
+    },
+    {
+      "type": "Subway",
+      "usageFrequency": "High",
+      "environmentalContribution": "High",
+      "speedAdvantage": "High"
+    },
+    {
+      "type": "Ferry",
+      "usageFrequency": "Low",
+      "environmentalContribution": "Medium",
+      "speedAdvantage": "Medium"
+    },
+    {
+      "type": "Tram",
+      "usageFrequency": "Medium",
+      "environmentalContribution": "High",
+      "speedAdvantage": "Medium"
+    },
+    {
+      "type": "Airplane",
+      "usageFrequency": "Low",
+      "environmentalContribution": "Low",
+      "speedAdvantage": "High"
     }
   ]
 }
