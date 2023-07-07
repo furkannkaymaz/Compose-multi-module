@@ -20,7 +20,7 @@ fun <T> StateFlow<T>.collectWhenResumed(
     }
 }
 
-/**If you only need to perform lifecycle-aware collection on a single flow*/
+
 fun <T> StateFlow<T>.listen(lifecycleOwner: LifecycleOwner, action: suspend (value: T) -> Unit) {
     lifecycleOwner.lifecycleScope.launch {
         this@listen

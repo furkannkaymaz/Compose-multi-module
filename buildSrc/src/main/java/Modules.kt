@@ -6,4 +6,5 @@ object Modules {
     const val network = ":network"
     const val core = ":core"
     const val utils = ":utils"
+    const val local = ":local"
 }
