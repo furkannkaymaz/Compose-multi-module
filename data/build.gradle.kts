@@ -17,6 +17,7 @@ dependencies {
     implementation(project(Modules.domain))
     implementation(project(Modules.network))
     implementation(project(Modules.core))
+    implementation(project(Modules.utils))
 
     implementation(Libs.AndroidX.core)
     implementation(Libs.AndroidX.datastore)

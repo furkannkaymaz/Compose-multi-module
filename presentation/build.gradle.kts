@@ -28,6 +28,7 @@ dependencies {
     //Androidx
     implementation(Libs.AndroidX.activityCompose)
     implementation(Libs.AndroidX.lifecycle)
+    implementation(Libs.AndroidX.composeLifecycle)
     implementation(Libs.AndroidX.core)
     implementation(Libs.AndroidX.pagination)
 

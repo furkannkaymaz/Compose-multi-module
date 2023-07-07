@@ -10,6 +10,7 @@ object Versions {
     object AndroidX {
         const val activityCompose = "1.7.2"
         const val lifecycle = "2.6.1"
+        const val compose = "2.6.1"
         const val appcompat = "1.6.1"
         const val core = "1.10.1"
         const val material = "1.9.0"

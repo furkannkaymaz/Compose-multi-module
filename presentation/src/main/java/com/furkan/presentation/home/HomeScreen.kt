@@ -1,0 +1,34 @@
+package com.furkan.presentation.home
+
+import android.util.Log
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.compose.runtime.getValue
+
+@Composable
+fun HomeScreen(name: String, modifier: Modifier = Modifier, viewModel: HomeViewModel = hiltViewModel()) {
+
+    val transportationState by viewModel.state.collectAsStateWithLifecycle()
+
+    Text(
+        text = "Hello $name!",
+        modifier = modifier
+    )
+
+    when(transportationState){
+        is HomeViewModel.TransportationState.Error -> {
+            Log.d("State123","Error")
+        }
+        is HomeViewModel.TransportationState.Loading -> {
+            Log.d("State123","Loading")
+        }
+        is HomeViewModel.TransportationState.TransportationData -> {
+            Log.d("State123",
+                (transportationState as HomeViewModel.TransportationState.TransportationData).transportation.transportation.toString())
+        }
+    }
+}
+

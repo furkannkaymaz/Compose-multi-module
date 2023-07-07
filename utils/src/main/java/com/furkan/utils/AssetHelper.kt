@@ -1,4 +1,4 @@
-package com.furkan
+package com.furkan.utils
 
 import android.content.Context
 import java.io.BufferedReader

@@ -5,6 +5,10 @@ object Libs {
             append("androidx.activity:activity-compose:")
             append(Versions.AndroidX.activityCompose)
         }
+        val composeLifecycle = buildString {
+            append("androidx.lifecycle:lifecycle-runtime-compose:")
+            append(Versions.AndroidX.activityCompose)
+        }
         val lifecycle = buildString {
             append("androidx.lifecycle:lifecycle-runtime-ktx:")
             append(Versions.AndroidX.lifecycle)
@@ -60,6 +64,7 @@ object Libs {
             append("androidx.navigation:navigation-compose:")
             append(Versions.Compose.composeNav)
         }
+
         val composeViewModel = buildString {
             append("androidx.lifecycle:lifecycle-viewmodel-compose:")
             append(Versions.Compose.composeViewModel)

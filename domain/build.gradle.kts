@@ -13,6 +13,7 @@ android {
 }
 dependencies {
 
+    implementation(project(Modules.utils))
     implementation(Libs.Hilt.hilt)
     kapt(Libs.Hilt.hiltKapt)
 }

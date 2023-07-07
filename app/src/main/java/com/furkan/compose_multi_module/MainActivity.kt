@@ -10,10 +10,12 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.furkan.compose_multi_module.ui.theme.ComposemultimoduleTheme
+import com.furkan.presentation.home.HomeScreen
 import com.furkan.presentation.home.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -29,7 +31,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                   HomeScreen(name = "Test")
                 }
             }
         }
@@ -39,18 +41,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier, viewModel: HomeViewModel = hiltViewModel()) {
 
-    LaunchedEffect(key1 = "" , block = {
-
-        viewModel.getTransportations()
-        viewModel.transportations.collectLatest {
-            Log.d("Data",it?.transportation.toString())
-        }
-    })
-
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
 }
 
 @Preview(showBackground = true)

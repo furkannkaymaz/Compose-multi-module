@@ -3,7 +3,8 @@ package com.furkan.data_sources
 import android.content.Context
 import com.furkan.core.di.DispatcherModule
 import com.furkan.model.TransportationModel
-import com.furkan.readDataFromAssets
+import com.furkan.utils.Resource
+import com.furkan.utils.readDataFromAssets
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -17,7 +18,7 @@ class TransportationLocalDataSources @Inject constructor(
     @DispatcherModule.IODispatcher private val ioDispatcher: CoroutineDispatcher
 ) {
     suspend fun getTransportationList(): TransportationModel {
-        return withContext(ioDispatcher){
+        return withContext(ioDispatcher) {
             gson.fromJson(
                 readDataFromAssets(context, "transportation.json"),
                 object : TypeToken<TransportationModel>() {}.type

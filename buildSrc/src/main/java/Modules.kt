@@ -5,4 +5,5 @@ object Modules {
     const val domain = ":domain"
     const val network = ":network"
     const val core = ":core"
+    const val utils = ":utils"
 }
