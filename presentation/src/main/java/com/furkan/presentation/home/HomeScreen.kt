@@ -13,21 +13,15 @@ fun HomeScreen(name: String, modifier: Modifier = Modifier, viewModel: HomeViewM
 
     val transportationState by viewModel.state.collectAsStateWithLifecycle()
 
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-
-    when(transportationState){
-        is HomeViewModel.TransportationState.Error -> {
+    when(val value = transportationState){
+        is TransportationState.Error -> {
             Log.d("State123","Error")
         }
-        is HomeViewModel.TransportationState.Loading -> {
+        is TransportationState.Loading -> {
             Log.d("State123","Loading")
         }
-        is HomeViewModel.TransportationState.TransportationData -> {
-            Log.d("State123",
-                (transportationState as HomeViewModel.TransportationState.TransportationData).transportation.transportation.toString())
+        is TransportationState.TransportationDataSuccess -> {
+            Log.d("State123", value.transportation.toString())
         }
     }
 }

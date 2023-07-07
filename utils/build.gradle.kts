@@ -14,5 +14,6 @@ android {
 dependencies {
 
     api(Libs.Network.gsonConverter)
+    implementation(Libs.AndroidX.lifecycle)
 
 }
