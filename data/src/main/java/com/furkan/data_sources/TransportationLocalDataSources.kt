@@ -3,7 +3,6 @@ package com.furkan.data_sources
 import android.content.Context
 import com.furkan.core.di.DispatcherModule
 import com.furkan.model.TransportationModel
-import com.furkan.utils.Resource
 import com.furkan.utils.readDataFromAssets
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

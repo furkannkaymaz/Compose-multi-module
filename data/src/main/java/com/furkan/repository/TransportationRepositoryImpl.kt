@@ -3,8 +3,7 @@ package com.furkan.repository
 import com.furkan.data_sources.TransportationLocalDataSources
 import com.furkan.data_sources.TransportationRemoteDataSources
 import com.furkan.model.TransportationModel
-import com.furkan.utils.Resource
-import kotlinx.coroutines.flow.Flow
+import com.furkan.utils.model.Resource
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject

@@ -31,22 +31,17 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                   HomeScreen(name = "Test")
+                    HomeScreen(name = "Test")
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier, viewModel: HomeViewModel = hiltViewModel()) {
-
-}
-
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     ComposemultimoduleTheme {
-        Greeting("Android")
+        HomeScreen(name = "Test")
     }
 }

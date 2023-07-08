@@ -1,7 +1,7 @@
 package com.furkan.repository
 
 import com.furkan.model.TransportationModel
-import com.furkan.utils.Resource
+import com.furkan.utils.model.Resource
 import kotlinx.coroutines.flow.Flow
 
 interface TransportationRepository {

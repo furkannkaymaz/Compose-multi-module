@@ -18,6 +18,7 @@ dependencies {
     implementation(project(Modules.network))
     implementation(project(Modules.core))
     implementation(project(Modules.utils))
+    implementation(project(Modules.local))
 
     implementation(Libs.AndroidX.core)
 

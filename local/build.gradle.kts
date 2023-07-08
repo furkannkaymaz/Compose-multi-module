@@ -14,6 +14,8 @@ android {
 
 dependencies {
 
+    implementation(project(Modules.domain))
+
     implementation(Libs.AndroidX.core)
     implementation(Libs.AndroidX.datastore)
 

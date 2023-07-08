@@ -1,4 +1,4 @@
-package com.furkan.data_store
+package com.furkan.repository
 
 import androidx.datastore.preferences.core.Preferences
 import kotlinx.coroutines.flow.Flow

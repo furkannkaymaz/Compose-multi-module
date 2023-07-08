@@ -1,12 +1,10 @@
 package com.furkan.usecase
 
 import com.furkan.mapper.TransportationMapper
-import com.furkan.model.TransportationModel
 import com.furkan.repository.TransportationRepository
 import com.furkan.uiModel.TransportationModelUi
-import com.furkan.utils.Resource
+import com.furkan.utils.model.Resource
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 

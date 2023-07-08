@@ -44,6 +44,8 @@ dependencies {
     implementation(Libs.Compose.composeHilt)
     implementation(Libs.Compose.composePagination)
 
+    implementation(Libs.AndroidX.datastore)
+
     //Glide
     implementation(Libs.Glide.glideLandscapist)
 

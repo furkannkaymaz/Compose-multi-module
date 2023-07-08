@@ -1,5 +1,3 @@
-import org.gradle.kotlin.dsl.extra
-import org.gradle.kotlin.dsl.invoke
 
 object Versions {
 

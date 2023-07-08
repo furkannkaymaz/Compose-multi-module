@@ -15,13 +15,13 @@ fun HomeScreen(name: String, modifier: Modifier = Modifier, viewModel: HomeViewM
 
     when(val value = transportationState){
         is TransportationState.Error -> {
-            Log.d("State123","Error")
+            Log.d("State","Error")
         }
         is TransportationState.Loading -> {
-            Log.d("State123","Loading")
+            Log.d("State","Loading")
         }
         is TransportationState.TransportationDataSuccess -> {
-            Log.d("State123", value.transportation.toString())
+            Log.d("State", value.transportation.toString())
         }
     }
 }

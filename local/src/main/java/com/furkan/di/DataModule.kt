@@ -6,7 +6,7 @@ import androidx.datastore.preferences.core.PreferenceDataStoreFactory
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStoreFile
 import com.furkan.data_store.DataStoreImpl
-import com.furkan.data_store.DataStoreRepository
+import com.furkan.repository.DataStoreRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,7 +28,7 @@ object DataModule {
 
     @Singleton
     @Provides
-    fun providePreferenceStorage(providePreferencesDataStore: DataStore<Preferences>): DataStoreRepository =
+    fun providePreferenceStorage(providePreferencesDataStore: DataStore<Preferences>): com.furkan.repository.DataStoreRepository =
         DataStoreImpl(providePreferencesDataStore)
 
 }
