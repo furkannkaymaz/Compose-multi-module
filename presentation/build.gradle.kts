@@ -9,6 +9,11 @@ android {
     namespace = "${Config.applicationId}.presentation"
     compileSdk = Config.compileSdkVersion
 
+    defaultConfig {
+
+        minSdk = Config.minSdkVersion
+
+    }
 
     buildFeatures {
         compose = true

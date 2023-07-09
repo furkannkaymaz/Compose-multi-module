@@ -9,6 +9,11 @@ android {
     namespace = "${Config.applicationId}.network"
     compileSdk = Config.compileSdkVersion
 
+    defaultConfig {
+        minSdk = Config.minSdkVersion
+
+
+    }
 }
 
 dependencies {

@@ -10,6 +10,12 @@ android {
     namespace = "${Config.applicationId}.data"
     compileSdk = Config.compileSdkVersion
 
+    defaultConfig {
+
+        minSdk = Config.minSdkVersion
+
+    }
+
 }
 
 dependencies {
