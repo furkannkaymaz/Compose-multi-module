@@ -29,6 +29,7 @@ android {
 dependencies {
 
     implementation(project(Modules.domain))
+    implementation(project(Modules.utils))
 
     //Androidx
     implementation(Libs.AndroidX.activityCompose)

@@ -17,6 +17,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.furkan.compose_multi_module.ui.theme.ComposemultimoduleTheme
 import com.furkan.presentation.home.HomeScreen
 import com.furkan.presentation.home.HomeViewModel
+import com.furkan.presentation.navigation.NavGraph
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 
@@ -31,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    HomeScreen(name = "Test")
+                    NavGraph()
                 }
             }
         }
@@ -41,7 +42,4 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    ComposemultimoduleTheme {
-        HomeScreen(name = "Test")
-    }
 }
