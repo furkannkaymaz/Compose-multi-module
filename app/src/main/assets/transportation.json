@@ -1,60 +1,70 @@
 {
   "transportation": [
     {
+      "id": 1,
       "type": "Bus",
       "usageFrequency": "High",
       "environmentalContribution": "Low",
       "speedAdvantage": "Low"
     },
     {
+      "id": 2,
       "type": "Train",
       "usageFrequency": "Medium",
       "environmentalContribution": "High",
       "speedAdvantage": "High"
     },
     {
+      "id": 3,
       "type": "Car",
       "usageFrequency": "High",
       "environmentalContribution": "Low",
       "speedAdvantage": "Medium"
     },
     {
+      "id": 4,
       "type": "Walking",
       "usageFrequency": "Low",
       "environmentalContribution": "High",
       "speedAdvantage": "Low"
     },
     {
+      "id": 5,
       "type": "Bicycle",
       "usageFrequency": "Medium",
       "environmentalContribution": "High",
       "speedAdvantage": "Medium"
     },
     {
+      "id": 6,
       "type": "Motorcycle",
       "usageFrequency": "Medium",
       "environmentalContribution": "Low",
       "speedAdvantage": "High"
     },
     {
+      "id": 7,
       "type": "Subway",
       "usageFrequency": "High",
       "environmentalContribution": "High",
       "speedAdvantage": "High"
     },
     {
+      "id": 8,
       "type": "Ferry",
       "usageFrequency": "Low",
       "environmentalContribution": "Medium",
       "speedAdvantage": "Medium"
     },
     {
+      "id": 9,
       "type": "Tram",
       "usageFrequency": "Medium",
       "environmentalContribution": "High",
       "speedAdvantage": "Medium"
     },
     {
+      "id": 10,
       "type": "Airplane",
       "usageFrequency": "Low",
       "environmentalContribution": "Low",

@@ -24,7 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.furkan.uiModel.TransportationUi
+import com.furkan.uiModel.transportation.TransportationUi
 
 @Composable
 fun HomeRoute(
@@ -76,31 +76,34 @@ fun HomeScreen(
         }
     }
 }
+
+
 @Composable
 fun TransportationList(
     transportationList: List<TransportationUi>,
-    transportationClick: (String) -> Unit,
+    transportationClick: (Int) -> Unit,
 ) {
     LazyColumn {
         items(transportationList) { item ->
             TransportationItem(
                 type = "Type ${item.type}",
                 speedAdvantage = "Speed Advantage ${item.speedAdvantage}",
-                onNewsClick = transportationClick
+                id = item.id,
+                transportationClick = transportationClick
             )
         }
     }
 }
 
 @Composable
-fun TransportationItem(type: String, speedAdvantage: String, onNewsClick: (String) -> Unit) {
+fun TransportationItem(type: String, speedAdvantage: String, id : Int, transportationClick: (Int) -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp)
             .clip(RoundedCornerShape(30.dp))
             .clickable {
-                onNewsClick("1")
+                transportationClick(id)
             }
             .background(Color.Blue)
     ) {

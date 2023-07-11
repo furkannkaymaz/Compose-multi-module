@@ -1,0 +1,84 @@
+{
+  "transportationDetail": [
+    {
+      "id": 1,
+      "type": "Bus",
+      "usagePercentage": "60%",
+      "economyPercentage": "40%",
+      "environmentalImpact": "Low",
+      "mostPreferedCountry": "Germany"
+    },
+    {
+      "id": 2,
+      "type": "Train",
+      "usagePercentage": "30%",
+      "economyPercentage": "60%",
+      "environmentalImpact": "High",
+      "mostPreferedCountry": "Japan"
+    },
+    {
+      "id": 3,
+      "type": "Car",
+      "usagePercentage": "70%",
+      "economyPercentage": "30%",
+      "environmentalImpact": "Low",
+      "mostPreferedCountry": "United States"
+    },
+    {
+      "id": 4,
+      "type": "Walking",
+      "usagePercentage": "10%",
+      "economyPercentage": "80%",
+      "environmentalImpact": "High",
+      "mostPreferedCountry": "Netherlands"
+    },
+    {
+      "id": 5,
+      "type": "Bicycle",
+      "usagePercentage": "20%",
+      "economyPercentage": "70%",
+      "environmentalImpact": "High",
+      "mostPreferedCountry": "Denmark"
+    },
+    {
+      "id": 6,
+      "type": "Motorcycle",
+      "usagePercentage": "15%",
+      "economyPercentage": "50%",
+      "environmentalImpact": "Low",
+      "mostPreferedCountry": "Italy"
+    },
+    {
+      "id": 7,
+      "type": "Subway",
+      "usagePercentage": "40%",
+      "economyPercentage": "60%",
+      "environmentalImpact": "High",
+      "mostPreferedCountry": "South Korea"
+    },
+    {
+      "id": 8,
+      "type": "Ferry",
+      "usagePercentage": "5%",
+      "economyPercentage": "30%",
+      "environmentalImpact": "Medium",
+      "mostPreferedCountry": "Norway"
+    },
+    {
+      "id": 9,
+      "type": "Tram",
+      "usagePercentage": "25%",
+      "economyPercentage": "70%",
+      "environmentalImpact": "High",
+      "mostPreferedCountry": "France"
+    },
+    {
+      "id": 10,
+      "type": "Airplane",
+      "usagePercentage": "5%",
+      "economyPercentage": "20%",
+      "environmentalImpact": "Low",
+      "mostPreferedCountry": "United Arab Emirates"
+    }
+  ]
+}

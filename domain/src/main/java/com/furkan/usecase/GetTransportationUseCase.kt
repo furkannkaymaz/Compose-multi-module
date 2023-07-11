@@ -2,7 +2,7 @@ package com.furkan.usecase
 
 import com.furkan.mapper.TransportationMapper
 import com.furkan.repository.TransportationRepository
-import com.furkan.uiModel.TransportationModelUi
+import com.furkan.uiModel.transportation.TransportationModelUi
 import com.furkan.utils.model.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

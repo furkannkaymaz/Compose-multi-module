@@ -3,7 +3,7 @@ package com.furkan.presentation.home
 import androidx.lifecycle.viewModelScope
 import com.furkan.presentation.base.BaseViewModel
 import com.furkan.presentation.base.UIState
-import com.furkan.uiModel.TransportationModelUi
+import com.furkan.uiModel.transportation.TransportationModelUi
 import com.furkan.usecase.GetTransportationUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
