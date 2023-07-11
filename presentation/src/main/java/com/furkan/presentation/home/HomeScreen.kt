@@ -1,18 +1,13 @@
 package com.furkan.presentation.home
 
-import android.os.Build
+
 import android.util.Log
-import androidx.annotation.RequiresApi
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.compose.runtime.getValue
-import androidx.core.os.BuildCompat
-import com.airbnb.lottie.compose.BuildConfig
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
+
 
 @Composable
 fun HomeScreen(name: String, modifier: Modifier = Modifier, viewModel: HomeViewModel = hiltViewModel()) {
