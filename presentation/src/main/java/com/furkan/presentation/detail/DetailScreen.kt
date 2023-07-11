@@ -21,7 +21,6 @@ fun DetailRoute(
     )
 }
 
-
 @Composable
 fun DetailScreen(
     state: TransportationDetailState,

@@ -20,14 +20,15 @@ class HomeViewModel @Inject constructor(
         getTransportations()
     }
 
-     private fun getTransportations() {
+    private fun getTransportations() {
         viewModelScope.launch {
-            getTransportationUseCase.invoke().collect{
+            getTransportationUseCase.invoke().collect {
                 setState(TransportationState.Loading(false))
-                when(it){
+                when (it) {
                     is GetTransportationUseCase.GetTransportationUseCaseState.Data -> {
                         setState(TransportationState.TransportationDataSuccess(it.transportation))
                     }
+
                     is GetTransportationUseCase.GetTransportationUseCaseState.Error -> {
                         setState(TransportationState.Error("Error Message"))
                     }
@@ -35,11 +36,12 @@ class HomeViewModel @Inject constructor(
             }
         }
     }
-
 }
 
 sealed class TransportationState : UIState {
     data class Loading(val isLoading: Boolean) : TransportationState()
-    data class TransportationDataSuccess(val transportation: TransportationModelUi) : TransportationState()
+    data class TransportationDataSuccess(val transportation: TransportationModelUi) :
+        TransportationState()
+
     data class Error(val message: String) : TransportationState()
 }

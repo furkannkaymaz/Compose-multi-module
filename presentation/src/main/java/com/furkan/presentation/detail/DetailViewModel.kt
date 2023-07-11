@@ -22,12 +22,13 @@ class DetailViewModel @Inject constructor(
 
     private fun getTransportations() {
         viewModelScope.launch {
-            getTransportationDetailUseCase.invoke().collect{
+            getTransportationDetailUseCase.invoke().collect {
                 setState(TransportationDetailState.Loading(false))
-                when(it){
+                when (it) {
                     is GetTransportationDetailUseCase.GetTransportationDetailUseCaseState.Data -> {
                         setState(TransportationDetailState.TransportationDataSuccess(it.transportation))
                     }
+
                     is GetTransportationDetailUseCase.GetTransportationDetailUseCaseState.Error -> {
                         setState(TransportationDetailState.Error("Error Message"))
                     }
@@ -35,11 +36,12 @@ class DetailViewModel @Inject constructor(
             }
         }
     }
-
 }
 
 sealed class TransportationDetailState : UIState {
     data class Loading(val isLoading: Boolean) : TransportationDetailState()
-    data class TransportationDataSuccess(val transportation: TransportationUiDetail) : TransportationDetailState()
+    data class TransportationDataSuccess(val transportation: TransportationUiDetail) :
+        TransportationDetailState()
+
     data class Error(val message: String) : TransportationDetailState()
 }

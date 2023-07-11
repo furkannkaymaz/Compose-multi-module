@@ -42,7 +42,6 @@ fun HomeRoute(
     )
 }
 
-
 @Composable
 fun HomeScreen(
     state: TransportationState,
@@ -96,7 +95,12 @@ fun TransportationList(
 }
 
 @Composable
-fun TransportationItem(type: String, speedAdvantage: String, id : Int, transportationClick: (Int) -> Unit) {
+fun TransportationItem(
+    type: String,
+    speedAdvantage: String,
+    id: Int,
+    transportationClick: (Int) -> Unit
+) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
