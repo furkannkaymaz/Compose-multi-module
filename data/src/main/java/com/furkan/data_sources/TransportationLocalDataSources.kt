@@ -4,6 +4,7 @@ import android.content.Context
 import com.furkan.core.di.DispatcherModule
 import com.furkan.model.transportation.TransportationModel
 import com.furkan.model.transportation_detail.TransportationDetail
+import com.furkan.utils.Const
 import com.furkan.utils.readDataFromAssets
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -20,7 +21,7 @@ class TransportationLocalDataSources @Inject constructor(
     suspend fun getTransportationList(): TransportationModel {
         return withContext(ioDispatcher) {
             gson.fromJson(
-                readDataFromAssets(context, "transportation.json"),
+                readDataFromAssets(context, Const.JsonFile.transportationJson),
                 object : TypeToken<TransportationModel>() {}.type
             )
         }
@@ -29,8 +30,8 @@ class TransportationLocalDataSources @Inject constructor(
     suspend fun getTransportationDetailList(): TransportationDetail {
         return withContext(ioDispatcher) {
             gson.fromJson(
-                readDataFromAssets(context, "transportation.json"),
-                object : TypeToken<TransportationModel>() {}.type
+                readDataFromAssets(context, Const.JsonFile.transportationDetailJson),
+                object : TypeToken<TransportationDetail>() {}.type
             )
         }
     }

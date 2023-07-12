@@ -4,6 +4,7 @@ import androidx.lifecycle.viewModelScope
 import com.furkan.presentation.base.BaseViewModel
 import com.furkan.presentation.base.UIState
 import com.furkan.uiModel.transportation_detail.TransportationUiDetail
+import com.furkan.uiModel.transportation_detail.TransportationUiDetailItem
 import com.furkan.usecase.GetTransportationDetailUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -16,19 +17,14 @@ class DetailViewModel @Inject constructor(
 
     override fun setInitialState() = TransportationDetailState.Loading(true)
 
-    init {
-        getTransportations()
-    }
-
-    private fun getTransportations() {
+     fun getTransportations(id: Int) {
         viewModelScope.launch {
-            getTransportationDetailUseCase.invoke().collect {
+            getTransportationDetailUseCase.invoke(id).collect {
                 setState(TransportationDetailState.Loading(false))
                 when (it) {
                     is GetTransportationDetailUseCase.GetTransportationDetailUseCaseState.Data -> {
                         setState(TransportationDetailState.TransportationDataSuccess(it.transportation))
                     }
-
                     is GetTransportationDetailUseCase.GetTransportationDetailUseCaseState.Error -> {
                         setState(TransportationDetailState.Error("Error Message"))
                     }
@@ -40,7 +36,7 @@ class DetailViewModel @Inject constructor(
 
 sealed class TransportationDetailState : UIState {
     data class Loading(val isLoading: Boolean) : TransportationDetailState()
-    data class TransportationDataSuccess(val transportation: TransportationUiDetail) :
+    data class TransportationDataSuccess(val transportation: TransportationUiDetailItem) :
         TransportationDetailState()
 
     data class Error(val message: String) : TransportationDetailState()

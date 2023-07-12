@@ -28,7 +28,7 @@ import com.furkan.uiModel.transportation.TransportationUi
 
 @Composable
 fun HomeRoute(
-    onItemClick: (String) -> Unit,
+    onItemClick: (Int) -> Unit,
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
@@ -38,7 +38,6 @@ fun HomeRoute(
         state = transportationState,
         onItemClick = onItemClick,
         modifier = modifier,
-        viewModel = viewModel
     )
 }
 
@@ -46,8 +45,7 @@ fun HomeRoute(
 fun HomeScreen(
     state: TransportationState,
     modifier: Modifier = Modifier,
-    onItemClick: (String) -> Unit,
-    viewModel: HomeViewModel,
+    onItemClick: (Int) -> Unit,
 ) {
     Column(
         modifier = modifier
@@ -67,9 +65,7 @@ fun HomeScreen(
 
             is TransportationState.TransportationDataSuccess -> {
                 state.transportation.transportation?.let {
-                    TransportationList(it) {
-
-                    }
+                    TransportationList(transportationList = it, transportationClick = onItemClick)
                 }
             }
         }

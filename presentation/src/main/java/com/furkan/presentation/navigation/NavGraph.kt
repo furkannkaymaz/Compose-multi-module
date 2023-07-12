@@ -17,11 +17,9 @@ fun NavGraph() {
     ) {
         homeScreen(
             onItemClick = {
-                //
+                navController.navigateDetail(it)
             }
         )
-        detailScreen({
-
-        })
+        detailScreen()
     }
 }
