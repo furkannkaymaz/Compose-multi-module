@@ -1,6 +1,5 @@
 package com.furkan.presentation.detail
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -9,11 +8,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
@@ -28,22 +23,22 @@ fun DetailRoute(
     transportationId: Int,
     viewModel: DetailViewModel = hiltViewModel()
 ) {
+    val transportationDetailState by viewModel.state.collectAsStateWithLifecycle()
 
     DetailScreen(
-        viewModel = viewModel,
-        transportationId = transportationId,
+        transportationDetailState = transportationDetailState,
         modifier = modifier,
+        getTransportations = { viewModel.getTransportations(transportationId) }
     )
 }
 
 @Composable
 fun DetailScreen(
     modifier: Modifier,
-    viewModel: DetailViewModel,
-    transportationId: Int
+    transportationDetailState: TransportationDetailState,
+    getTransportations: () -> Unit
 ) {
-    viewModel.getTransportations(transportationId)
-    val newsDetailState by viewModel.state.collectAsStateWithLifecycle()
+    getTransportations.invoke()
 
     Column(
         modifier = modifier
@@ -53,7 +48,7 @@ fun DetailScreen(
         verticalArrangement = Arrangement.Center
     ) {
 
-        when (val value = newsDetailState) {
+        when (val value = transportationDetailState) {
             is TransportationDetailState.Error -> {
                 // handle error
             }
