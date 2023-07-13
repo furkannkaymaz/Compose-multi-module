@@ -1,5 +1,6 @@
 package com.furkan.presentation.home
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -27,11 +28,13 @@ import androidx.compose.ui.unit.sp
 import com.furkan.presentation.base.components.BoldText
 import com.furkan.presentation.base.components.SemiBoldText
 import com.furkan.uiModel.transportation.TransportationUi
+import com.furkan.utils.Screens
 
 @Composable
 fun HomeRoute(
     onItemClick: (Int) -> Unit,
     modifier: Modifier = Modifier,
+    deeplinkData: String?,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val transportationState by viewModel.state.collectAsStateWithLifecycle()
@@ -39,6 +42,7 @@ fun HomeRoute(
     HomeScreen(
         state = transportationState,
         onItemClick = onItemClick,
+        deeplinkData = deeplinkData,
         modifier = modifier,
     )
 }
@@ -47,8 +51,13 @@ fun HomeRoute(
 fun HomeScreen(
     state: TransportationState,
     modifier: Modifier = Modifier,
+    deeplinkData: String?,
     onItemClick: (Int) -> Unit,
 ) {
+
+    Log.d(Screens.HOME_SCREEN, " Deeplink Value : ${deeplinkData.toString()}")
+    // adb shell am start -W -a android.intent.action.VIEW -d "example://compose/home/test"
+
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -125,4 +134,5 @@ fun TransportationItem(
         }
     }
 }
+
 
