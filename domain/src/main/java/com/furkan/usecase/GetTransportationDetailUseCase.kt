@@ -24,8 +24,7 @@ class GetTransportationDetailUseCase @Inject constructor(
                     } else {
                         emit(
                             GetTransportationDetailUseCaseState.Error(
-                                stringResourceProviderImpl.getString(
-                                    (R.string.txt_item_not_found)
+                                stringResourceProviderImpl.getString((R.string.txt_item_not_found)
                                 )
                             )
                         )

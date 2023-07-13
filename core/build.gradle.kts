@@ -8,13 +8,7 @@ plugins {
 
 android {
     namespace = "${Config.applicationId}.core"
-    compileSdk = Config.compileSdkVersion
 
-    defaultConfig {
-
-        minSdk = Config.minSdkVersion
-
-    }
 }
 
 dependencies {
