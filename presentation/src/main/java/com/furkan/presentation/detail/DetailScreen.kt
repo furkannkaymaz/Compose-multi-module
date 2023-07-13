@@ -6,16 +6,21 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Warning
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.furkan.compose_multi_module.presentation.R
+import com.furkan.presentation.base.components.ErrorMessageCard
 import com.furkan.presentation.base.components.NormalText
+import com.furkan.presentation.base.components.ProgressBar
 
 @Composable
 fun DetailRoute(
@@ -50,20 +55,23 @@ fun DetailScreen(
         verticalArrangement = Arrangement.Center
     ) {
 
-        when (val value = transportationDetailState) {
+        when (transportationDetailState) {
             is TransportationDetailState.Error -> {
-                // handle error
+                ErrorMessageCard(
+                    message = stringResource(R.string.txt_something_went_wrong),
+                    icon = Icons.Default.Warning
+                )
             }
 
             is TransportationDetailState.Loading -> {
-                // handle progress
+                ProgressBar()
             }
 
             is TransportationDetailState.TransportationDataSuccess -> {
                 DetailItem(
-                    economyPercentage = value.transportation.economyPercentage,
-                    environmentalImpact = value.transportation.environmentalImpact,
-                    mostPreferedCountry = value.transportation.mostPreferedCountry
+                    economyPercentage = transportationDetailState.transportation.economyPercentage,
+                    environmentalImpact = transportationDetailState.transportation.environmentalImpact,
+                    mostPreferedCountry = transportationDetailState.transportation.mostPreferedCountry
                 )
             }
         }
@@ -83,12 +91,12 @@ fun DetailItem(
             text = "EconomyPercentage: $economyPercentage",
             fontSize = 18.sp
         )
-        Spacer(modifier = Modifier.height(4.dp))
+        Spacer(modifier = Modifier.height(8.dp))
         NormalText(
             text = "Desc: $environmentalImpact",
             fontSize = 14.sp
         )
-        Spacer(modifier = Modifier.height(4.dp))
+        Spacer(modifier = Modifier.height(8.dp))
         NormalText(
             text = "URL: $mostPreferedCountry",
             fontSize = 14.sp,

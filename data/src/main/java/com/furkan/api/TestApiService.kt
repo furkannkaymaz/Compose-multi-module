@@ -1,11 +1,12 @@
 package com.furkan.api
 
+import com.furkan.model.transportation.TransportationModel
 import retrofit2.http.GET
 
-internal interface TestApiService {
+interface TransportationApiService {
 
-    @GET("test/transportation")
+    @GET("api/data.json")
     suspend fun getTransportations(
-    ): List<Nothing>
+    ): TransportationModel
 
 }

@@ -10,10 +10,9 @@ import com.furkan.utils.Const
 @Composable
 fun NavGraph() {
     val navController = rememberNavController()
-
     NavHost(
         navController = navController,
-        startDestination = Const.Route.homeRoute
+        startDestination = Const.Route.homeRoute,
     ) {
         homeScreen(
             onItemClick = {

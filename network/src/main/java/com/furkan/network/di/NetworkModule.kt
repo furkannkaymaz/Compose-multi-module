@@ -1,7 +1,6 @@
 package com.furkan.network.di
 
 import android.content.Context
-import androidx.viewbinding.BuildConfig
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -10,9 +9,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -48,7 +45,7 @@ object NetworkModule {
         return Retrofit.Builder()
             .client(okHttpClient)
             .addConverterFactory(converterFactory)
-            .baseUrl("https://baseurl")
+            .baseUrl("https://furkannkaymaz.github.io/")
             .build()
     }
 

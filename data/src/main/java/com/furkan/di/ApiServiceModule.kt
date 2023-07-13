@@ -1,6 +1,6 @@
 package com.furkan.di
 
-import com.furkan.api.TestApiService
+import com.furkan.api.TransportationApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -10,8 +10,8 @@ import retrofit2.create
 
 @Module
 @InstallIn(SingletonComponent::class)
-internal object ApiServiceModule {
+object ApiServiceModule {
 
     @Provides
-    fun provideTestApiService(retrofit: Retrofit): TestApiService = retrofit.create()
+    fun provideTransportationApiService(retrofit: Retrofit): TransportationApiService = retrofit.create()
 }
