@@ -7,7 +7,7 @@ This module contains the user interface and application launch code. It manages 
 The data module provides access to data sources and handles data processing tasks. It performs operations such as retrieving data from remote servers or local databases, updating data, and storing data.
 
 #### Presentation
-This module supplies the necessary components for organizing the user interface and presenting data to the user. It utilizes Compose or other UI libraries to create the user interface.
+This module supplies the necessary components for organizing the user interface and presenting data to the user. It utilizes Compose libraries to create the user interface.
 
 #### Network
 The network module manages network operations required for communication with data sources such as APIs or servers. It handles tasks like data retrieval, data transmission, and other network operations.
@@ -19,9 +19,9 @@ This module encapsulates the application's business logic. It determines how dat
 The core module encompasses common utility functions and tools used throughout the project. It may include general helper functions, custom data structures, and useful helper classes.
 
 ### Utils
-Helpful resources
+The utils module contains general-purpose helper functions and tools. This module provides custom helper classes, data structures, utility functions, and other useful tools that are utilized throughout the project.
 
--- Development continue
+## Development continue
 
 ### Technologies
 
