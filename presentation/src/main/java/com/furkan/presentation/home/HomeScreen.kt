@@ -24,6 +24,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.furkan.presentation.base.components.BoldText
+import com.furkan.presentation.base.components.SemiBoldText
 import com.furkan.uiModel.transportation.TransportationUi
 
 @Composable
@@ -110,16 +112,14 @@ fun TransportationItem(
         Column(
             modifier = Modifier.padding(16.dp)
         ) {
-            Text(
+            BoldText(
                 text = type,
                 color = Color.Black,
                 fontSize = 18.sp,
-                fontWeight = FontWeight.Bold
             )
             Spacer(modifier = Modifier.height(16.dp))
-            Text(
+            SemiBoldText(
                 text = speedAdvantage,
-                color = Color.Black,
                 fontSize = 14.sp
             )
         }

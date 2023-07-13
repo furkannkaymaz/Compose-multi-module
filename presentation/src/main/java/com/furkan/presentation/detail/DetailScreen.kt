@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.furkan.presentation.base.components.NormalText
 
 @Composable
 fun DetailRoute(
@@ -78,17 +79,17 @@ fun DetailItem(
     Column(
         modifier = Modifier.padding(16.dp)
     ) {
-        Text(
+        NormalText(
             text = "EconomyPercentage: $economyPercentage",
             fontSize = 18.sp
         )
         Spacer(modifier = Modifier.height(4.dp))
-        Text(
+        NormalText(
             text = "Desc: $environmentalImpact",
             fontSize = 14.sp
         )
         Spacer(modifier = Modifier.height(4.dp))
-        Text(
+        NormalText(
             text = "URL: $mostPreferedCountry",
             fontSize = 14.sp,
         )
