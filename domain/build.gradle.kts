@@ -19,6 +19,7 @@ android {
 dependencies {
 
     implementation(project(Modules.utils))
+    implementation(project(Modules.core))
     implementation(Libs.Hilt.hilt)
     implementation(Libs.AndroidX.datastore)
     kapt(Libs.Hilt.hiltKapt)
