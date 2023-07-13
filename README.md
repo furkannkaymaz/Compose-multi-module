@@ -24,8 +24,6 @@ The utils module contains general-purpose helper functions and tools. This modul
 ---> Development continue...
 
 ### Technologies
-
-- Technologies
 - The following technologies were used in this project:
 - Kotlin
 - Jetpack Compose
