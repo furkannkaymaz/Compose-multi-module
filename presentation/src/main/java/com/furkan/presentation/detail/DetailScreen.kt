@@ -11,7 +11,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -28,6 +27,7 @@ fun DetailRoute(
     DetailScreen(
         transportationDetailState = transportationDetailState,
         modifier = modifier,
+        transportationId = transportationId,
         getTransportations = { viewModel.getTransportations(transportationId) }
     )
 }
@@ -36,9 +36,10 @@ fun DetailRoute(
 fun DetailScreen(
     modifier: Modifier,
     transportationDetailState: TransportationDetailState,
-    getTransportations: () -> Unit
+    transportationId: Int,
+    getTransportations: (Int) -> Unit
 ) {
-    getTransportations.invoke()
+    getTransportations.invoke(transportationId)
 
     Column(
         modifier = modifier
@@ -78,8 +79,7 @@ fun DetailItem(
         modifier = Modifier.padding(16.dp)
     ) {
         Text(
-            text = "economyPercentage: $economyPercentage",
-            fontWeight = FontWeight.Bold,
+            text = "EconomyPercentage: $economyPercentage",
             fontSize = 18.sp
         )
         Spacer(modifier = Modifier.height(4.dp))

@@ -29,14 +29,14 @@ object Versions {
     }
 
     object Network {
-        val retrofit = "2.9.0"
-        val okhttp3 = "5.0.0-alpha.2"
-        val gsonConverter = "2.9.0"
-        val gson = "2.10.1"
+        const val retrofit = "2.9.0"
+        const val okhttp3 = "5.0.0-alpha.2"
+        const val gsonConverter = "2.9.0"
+        const val gson = "2.10.1"
     }
 
     object Glide {
-        val glideLandscapist = "2.2.1"
+        const val glideLandscapist = "2.2.1"
     }
 
     object Plugin {
@@ -50,7 +50,7 @@ object Versions {
     }
 
     object Others {
-        val inject = "1"
-        val kotlinCompilerExtensionVersion = "1.4.2"
+        const val inject = "1"
+        const val kotlinCompilerExtensionVersion = "1.4.2"
     }
 }
