@@ -1,4 +1,4 @@
-package com.furkan.utils
+package com.furkan.utils.conventer
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
