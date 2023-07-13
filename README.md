@@ -1,5 +1,7 @@
 ### Project Summary
 
+This project has been created using the JSON data obtained from my own GitHub page and the JSON used for the assets.
+
 #### App
 This module contains the user interface and application launch code. It manages user interactions and integrates other modules to facilitate the functioning of the application.
 
