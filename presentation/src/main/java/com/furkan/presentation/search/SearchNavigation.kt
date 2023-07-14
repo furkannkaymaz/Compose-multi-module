@@ -7,7 +7,7 @@ import com.furkan.utils.Const
 fun NavGraphBuilder.searchScreen(
 ) {
     composable(
-        route = Const.Route.settingsRoute,
+        route = Const.Route.searchRoute,
     ) { navBackStackEntry ->
         SearchRoute()
     }

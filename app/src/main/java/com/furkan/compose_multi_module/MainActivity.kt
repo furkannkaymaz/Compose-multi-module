@@ -14,6 +14,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.MainScreenView
 import com.furkan.compose_multi_module.ui.theme.ComposemultimoduleTheme
 import com.furkan.presentation.home.HomeScreen
 import com.furkan.presentation.home.HomeViewModel
@@ -32,7 +33,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    NavGraph()
+                    MainScreenView()
                 }
             }
         }

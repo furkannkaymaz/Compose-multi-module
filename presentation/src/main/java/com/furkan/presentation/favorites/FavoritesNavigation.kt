@@ -7,7 +7,7 @@ import com.furkan.utils.Const
 fun NavGraphBuilder.favoritesScreen(
 ) {
     composable(
-        route = Const.Route.settingsRoute,
+        route = Const.Route.favRoute,
     ) { navBackStackEntry ->
         FavoritesRoute()
     }
