@@ -5,10 +5,12 @@ import androidx.navigation.compose.composable
 import com.furkan.utils.Const
 
 fun NavGraphBuilder.searchScreen(
+    onItemClick: (Int) -> Unit
 ) {
     composable(
         route = Const.Route.searchRoute,
     ) { navBackStackEntry ->
-        SearchRoute()
+        val argument = navBackStackEntry.arguments?.getInt("id")
+        SearchRoute(onItemClick = onItemClick)
     }
 }

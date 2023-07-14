@@ -21,7 +21,8 @@ import com.furkan.presentation.home.TransportationList
 @Composable
 fun SearchRoute(
     modifier: Modifier = Modifier,
-    viewModel: SearchViewModel = hiltViewModel()
+    viewModel: SearchViewModel = hiltViewModel(),
+    onItemClick: (Int) -> Unit,
 ) {
 
     val transportationState by viewModel.state.collectAsStateWithLifecycle()
@@ -31,7 +32,8 @@ fun SearchRoute(
         state = transportationState,
         onQueryTextChange = {
             viewModel.onQueryTextChange(it)
-        }
+        },
+        onItemClick = onItemClick,
     )
 }
 
@@ -41,6 +43,8 @@ fun SearchScreen(
     modifier: Modifier,
     state: TransportationSearchState,
     onQueryTextChange: (String) -> Unit,
+    onItemClick: (Int) -> Unit,
+
 ) {
     Column(
         modifier = modifier
@@ -64,7 +68,7 @@ fun SearchScreen(
 
             is TransportationSearchState.TransportationDataSuccess -> {
                 state.transportation.transportation?.let {
-                    TransportationList(transportationList = it, transportationClick = {})
+                    TransportationList(transportationList = it, transportationClick = onItemClick)
                 }
             }
         }

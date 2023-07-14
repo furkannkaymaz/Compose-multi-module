@@ -1,10 +1,8 @@
 package com.furkan.presentation.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.rememberNavController
 import com.furkan.presentation.detail.detailScreen
 import com.furkan.presentation.favorites.favoritesScreen
 import com.furkan.presentation.home.homeScreen
@@ -24,7 +22,11 @@ fun NavGraph(navController : NavHostController) {
             }
         )
         detailScreen()
-        searchScreen()
+        searchScreen(
+            onItemClick = {
+                navController.navigateDetail(it)
+            }
+        )
         settingScreen()
         favoritesScreen()
     }
