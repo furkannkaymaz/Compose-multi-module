@@ -10,6 +10,7 @@ import androidx.navigation.navDeepLink
 import com.furkan.utils.Const
 
 fun NavGraphBuilder.detailScreen(
+    onBackPressed: () -> Unit
 ) {
     composable(
         route =Const.Route.detailRoute.plus("?id={transportationId}"),
@@ -33,7 +34,8 @@ fun NavGraphBuilder.detailScreen(
             }
             DetailRoute(
                 viewModel = hiltViewModel(),
-                transportationId = value?.toInt() ?: 0
+                transportationId = value?.toInt() ?: 0,
+                onBackPressed = onBackPressed
             )
         }
     )

@@ -21,7 +21,9 @@ fun NavGraph(navController : NavHostController) {
                 navController.navigateDetail(it)
             }
         )
-        detailScreen()
+        detailScreen(onBackPressed = {
+            navController.popBackStack()
+        })
         searchScreen(
             onItemClick = {
                 navController.navigateDetail(it)

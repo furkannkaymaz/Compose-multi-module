@@ -8,8 +8,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.furkan.compose_multi_module.presentation.R
 import com.furkan.presentation.base.components.BoldText
 import com.furkan.presentation.base.components.SwitchButton
 
@@ -36,12 +38,14 @@ fun SettingsScreen(
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+
+        BoldText(text = stringResource(R.string.txt_settings))
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
             BoldText(
-                text = "Change Theme",
+                text = "Some Settings",
                 modifier = Modifier.weight(1f),
                 textAlign = TextAlign.Start,
             )

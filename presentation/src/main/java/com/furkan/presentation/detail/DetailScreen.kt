@@ -1,6 +1,5 @@
 package com.furkan.presentation.detail
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,12 +20,14 @@ import com.furkan.compose_multi_module.presentation.R
 import com.furkan.presentation.base.components.ErrorMessageCard
 import com.furkan.presentation.base.components.NormalText
 import com.furkan.presentation.base.components.ProgressBar
+import com.furkan.presentation.base.components.TopContent
 
 @Composable
 fun DetailRoute(
     modifier: Modifier = Modifier,
     transportationId: Int,
-    viewModel: DetailViewModel = hiltViewModel()
+    viewModel: DetailViewModel = hiltViewModel(),
+    onBackPressed: () -> Unit
 ) {
     val transportationDetailState by viewModel.state.collectAsStateWithLifecycle()
 
@@ -34,7 +35,8 @@ fun DetailRoute(
         transportationDetailState = transportationDetailState,
         modifier = modifier,
         transportationId = transportationId,
-        getTransportations = { viewModel.getTransportations(transportationId) }
+        getTransportations = { viewModel.getTransportations(transportationId) },
+        onBackPressed = onBackPressed
     )
 }
 
@@ -43,7 +45,8 @@ fun DetailScreen(
     modifier: Modifier,
     transportationDetailState: TransportationDetailState,
     transportationId: Int,
-    getTransportations: (Int) -> Unit
+    getTransportations: (Int) -> Unit,
+    onBackPressed: () -> Unit
 ) {
     getTransportations.invoke(transportationId)
 
@@ -52,8 +55,8 @@ fun DetailScreen(
             .fillMaxSize()
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
     ) {
+        TopContent(onBackPressed = onBackPressed)
 
         when (transportationDetailState) {
             is TransportationDetailState.Error -> {

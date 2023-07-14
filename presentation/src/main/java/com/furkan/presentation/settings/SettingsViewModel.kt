@@ -1,4 +1,6 @@
 package com.furkan.presentation.settings
 
-class SettingsViewModel {
+import androidx.lifecycle.ViewModel
+
+class SettingsViewModel : ViewModel() {
 }
