@@ -22,9 +22,22 @@ android {
     }
 
     buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        debug {
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+            isMinifyEnabled = Config.minifyEnabledDebug
+            isDebuggable = true
+        }
+        release {
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+            isMinifyEnabled = Config.minifyEnabledRelease
+            isShrinkResources = true
+            isDebuggable = false
         }
     }
 
@@ -36,7 +49,7 @@ android {
         kotlinCompilerExtensionVersion =  Versions.Others.kotlinCompilerExtensionVersion
     }
 
-    packagingOptions {
+    packaging {
         resources {
             excludes.add("/META-INF/{AL2.0,LGPL2.1}")
         }
