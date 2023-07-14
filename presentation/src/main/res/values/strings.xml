@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">presentation</string>
     <string name="txt_something_went_wrong">Something went wrong</string>
+    <string name="txt_transportation_types">Transportation Types</string>
 </resources>

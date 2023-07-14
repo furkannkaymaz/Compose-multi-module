@@ -22,8 +22,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.furkan.compose_multi_module.presentation.R
 import com.furkan.presentation.base.components.BoldText
 import com.furkan.presentation.base.components.ErrorMessageCard
 import com.furkan.presentation.base.components.ProgressBar
@@ -66,6 +68,8 @@ fun HomeScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
+        BoldText(text = stringResource(R.string.txt_transportation_types))
+
         when (state) {
             is TransportationState.Error -> {
                 ErrorMessageCard(message = state.message, icon = Icons.Default.Warning)
@@ -95,8 +99,8 @@ fun TransportationList(
     LazyColumn {
         items(transportationList) { item ->
             TransportationItem(
-                type = "Type ${item.type}",
-                speedAdvantage = "Speed Advantage ${item.speedAdvantage}",
+                type = "Type : ${item.type}",
+                speedAdvantage = "Speed Advantage : ${item.speedAdvantage}",
                 id = item.id,
                 transportationClick = transportationClick
             )

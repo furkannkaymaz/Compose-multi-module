@@ -14,7 +14,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SearchViewModel @Inject constructor(
     private val getTransportationUseCase: GetTransportationUseCase,
-    private val searchTransportationUseCase: SearchTransportationUseCase
+    private val searchTransportationUseCase: SearchTransportationUseCase,
 ) : BaseViewModel<TransportationSearchState>() {
 
     override fun setInitialState() = TransportationSearchState.Loading(true)
@@ -33,7 +33,7 @@ class SearchViewModel @Inject constructor(
                     }
 
                     is GetTransportationUseCase.GetTransportationUseCaseState.Error -> {
-                        setState(TransportationSearchState.Error("Error Message"))
+                        setState(TransportationSearchState.Error(it.message))
                     }
                 }
             }
@@ -61,11 +61,10 @@ class SearchViewModel @Inject constructor(
                     }
 
                     is SearchTransportationUseCase.SearchTransportationUseCaseState.Error -> {
-                        setState(TransportationSearchState.Error("Error Message"))
+                        setState(TransportationSearchState.Error(it.message))
                     }
-
-                    SearchTransportationUseCase.SearchTransportationUseCaseState.TransportationDataNotFound-> {
-                        setState(TransportationSearchState.Error("No Data Found"))
+                    is SearchTransportationUseCase.SearchTransportationUseCaseState.TransportationDataNotFound-> {
+                        setState(TransportationSearchState.Error(it.message))
                     }
                 }
             }
