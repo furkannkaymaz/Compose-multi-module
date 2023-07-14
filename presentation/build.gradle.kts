@@ -31,6 +31,7 @@ dependencies {
     implementation(Libs.AndroidX.composeLifecycle)
     implementation(Libs.AndroidX.core)
     implementation(Libs.AndroidX.pagination)
+    implementation(Libs.AndroidX.composeMateriel)
 
     //Compose
     implementation(platform(Libs.Compose.composeBom))

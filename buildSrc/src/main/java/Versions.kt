@@ -14,6 +14,7 @@ object Versions {
         const val material = "1.9.0"
         const val splashScreen = "1.0.1"
         const val pagination = "3.1.1"
+        const val composeMateriel = "1.4.3"
         const val datastore = "1.0.0"
         const val workManager = "2.8.1"
         const val workManagerHilt = "1.0.0"
@@ -21,7 +22,7 @@ object Versions {
 
     object Compose {
         const val composeBom = "2022.10.00"
-        const val composeNav = "2.5.3"
+        const val composeNav = "2.6.0"
         const val composeHilt = "1.0.0"
         const val composeLottie = "6.0.0"
         const val composeViewModel = "2.6.1"

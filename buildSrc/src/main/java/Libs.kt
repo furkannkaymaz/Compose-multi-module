@@ -5,6 +5,10 @@ object Libs {
             append("androidx.activity:activity-compose:")
             append(Versions.AndroidX.activityCompose)
         }
+        val composeMateriel = buildString {
+            append("androidx.compose.material:material:")
+            append(Versions.AndroidX.composeMateriel)
+        }
         val composeLifecycle = buildString {
             append("androidx.lifecycle:lifecycle-runtime-compose:")
             append(Versions.AndroidX.activityCompose)

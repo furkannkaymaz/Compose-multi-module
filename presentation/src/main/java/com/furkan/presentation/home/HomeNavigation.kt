@@ -8,7 +8,6 @@ import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import com.furkan.utils.Const
 
-
 fun NavGraphBuilder.homeScreen(
     onItemClick: (Int) -> Unit
 ) {
