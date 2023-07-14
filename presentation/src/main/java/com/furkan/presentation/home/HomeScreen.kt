@@ -1,7 +1,6 @@
 package com.furkan.presentation.home
 
 import android.util.Log
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -52,7 +51,7 @@ fun HomeRoute(
 @Composable
 fun HomeScreen(
     state: TransportationState,
-    modifier: Modifier = Modifier,
+    modifier: Modifier,
     deeplinkData: String?,
     onItemClick: (Int) -> Unit,
 ) {
@@ -73,7 +72,7 @@ fun HomeScreen(
             }
 
             is TransportationState.Loading -> {
-                if (state.isLoading){
+                if (state.isLoading) {
                     ProgressBar()
                 }
             }
@@ -119,8 +118,9 @@ fun TransportationItem(
             .clip(RoundedCornerShape(30.dp))
             .clickable {
                 transportationClick(id)
-            }
-            .background(Color.Blue)
+            },
+        backgroundColor = Color.LightGray
+
     ) {
         Column(
             modifier = Modifier.padding(16.dp)
