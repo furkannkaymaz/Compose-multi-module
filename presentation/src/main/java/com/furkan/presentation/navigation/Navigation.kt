@@ -13,3 +13,13 @@ fun NavController.navigateDetail(
         navOptions
     )
 }
+
+fun NavController.navigateWebView(
+    url: String,
+    navOptions: NavOptions? = null
+) {
+    this.navigate(
+        Const.Route.webViewRoute.plus("?url=${url}"),
+        navOptions
+    )
+}

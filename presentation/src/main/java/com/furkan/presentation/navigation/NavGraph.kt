@@ -8,10 +8,11 @@ import com.furkan.presentation.favorites.favoritesScreen
 import com.furkan.presentation.home.homeScreen
 import com.furkan.presentation.search.searchScreen
 import com.furkan.presentation.settings.settingScreen
+import com.furkan.presentation.web_view.webViewScreen
 import com.furkan.utils.Const
 
 @Composable
-fun NavGraph(navController : NavHostController) {
+fun NavGraph(navController: NavHostController) {
     NavHost(
         navController = navController,
         startDestination = Const.Route.homeRoute,
@@ -29,7 +30,10 @@ fun NavGraph(navController : NavHostController) {
                 navController.navigateDetail(it)
             }
         )
-        settingScreen()
+        settingScreen(onWebViewClick = {
+            navController.navigateWebView(it)
+        })
         favoritesScreen()
+        webViewScreen()
     }
 }
