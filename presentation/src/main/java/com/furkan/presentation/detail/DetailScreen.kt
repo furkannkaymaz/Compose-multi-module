@@ -52,8 +52,7 @@ fun DetailScreen(
 
     Column(
         modifier = modifier
-            .fillMaxSize()
-            .padding(16.dp),
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         TopContent(onBackPressed = onBackPressed)
@@ -96,12 +95,12 @@ fun DetailItem(
         )
         Spacer(modifier = Modifier.height(8.dp))
         NormalText(
-            text = "Desc: $environmentalImpact",
+            text = "Environmental Impact: $environmentalImpact",
             fontSize = 14.sp
         )
         Spacer(modifier = Modifier.height(8.dp))
         NormalText(
-            text = "URL: $mostPreferedCountry",
+            text = "Most Prefered Country: $mostPreferedCountry",
             fontSize = 14.sp,
         )
     }

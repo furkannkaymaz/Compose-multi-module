@@ -31,6 +31,8 @@ import com.furkan.presentation.base.components.BoldText
 import com.furkan.presentation.base.components.ErrorMessageCard
 import com.furkan.presentation.base.components.ProgressBar
 import com.furkan.presentation.base.components.SemiBoldText
+import com.furkan.presentation.base.components.TopContent
+import com.furkan.presentation.ui.theme.transportationItemColor
 import com.furkan.uiModel.transportation.TransportationUi
 import com.furkan.utils.Screens
 
@@ -64,12 +66,11 @@ fun HomeScreen(
 
     Column(
         modifier = modifier
-            .fillMaxSize()
-            .padding(16.dp),
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        BoldText(text = stringResource(R.string.txt_transportation_types))
+        TopContent(headerTitle = stringResource(id = R.string.txt_transportation_types))
 
         when (state) {
             is TransportationState.Error -> {
@@ -124,7 +125,7 @@ fun TransportationItem(
             .clickable {
                 transportationClick(id)
             },
-        backgroundColor = Color.LightGray
+        backgroundColor = transportationItemColor
 
     ) {
         Column(

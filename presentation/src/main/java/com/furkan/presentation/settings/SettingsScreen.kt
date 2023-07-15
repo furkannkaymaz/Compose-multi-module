@@ -64,7 +64,7 @@ fun SettingsScreen(
                 .fillMaxWidth()
                 .align(Alignment.CenterHorizontally)
         ) {
-            Text(text = "Give Me Star")
+            Text(text = stringResource(R.string.txt_give_me_star))
         }
     }
 }
