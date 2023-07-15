@@ -3,12 +3,12 @@ package com.furkan.repository
 import android.util.Log
 import com.furkan.compose_multi_module.data.R
 import com.furkan.core.infrastructure.StringResourceProvider
-import com.furkan.core.infrastructure.StringResourceProviderImpl
 import com.furkan.data_sources.TransportationLocalDataSources
 import com.furkan.data_sources.TransportationRemoteDataSources
 import com.furkan.mapper.TransportationDetailMapper
 import com.furkan.model.transportation.TransportationModel
 import com.furkan.uiModel.transportation_detail.TransportationUiDetail
+import com.furkan.utils.Screens
 import com.furkan.utils.model.Resource
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
@@ -29,12 +29,12 @@ class TransportationRepositoryImpl @Inject constructor(
     override fun getTransportationList() = flow<Resource<TransportationModel>> {
         emit(Resource.Success(remoteDataSources.getTransportationList()))
     }.catch { e ->
-        Log.e("TransportationRepository", "Error fetching transportation list from remote")
+        Log.e(Screens.TRANSPORTATION_REPOSITORY, "Error fetching transportation list from remote")
         try {
             emit(Resource.Success(localDataSources.getTransportationList()))
         } catch (e: Exception) {
             Log.e(
-                "TransportationRepository",
+                Screens.TRANSPORTATION_REPOSITORY,
                 "Error fetching transportation list from remote and local"
             )
             emit(Resource.Error("Error Message"))
