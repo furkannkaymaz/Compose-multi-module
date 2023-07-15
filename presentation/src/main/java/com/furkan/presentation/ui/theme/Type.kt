@@ -1,4 +1,4 @@
-package com.furkan.compose_multi_module.ui.theme
+package com.furkan.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

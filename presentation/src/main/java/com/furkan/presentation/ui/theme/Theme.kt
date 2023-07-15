@@ -1,4 +1,4 @@
-package com.furkan.compose_multi_module.ui.theme
+package com.furkan.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
