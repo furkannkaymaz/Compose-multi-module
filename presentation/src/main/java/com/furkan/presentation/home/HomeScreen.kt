@@ -14,6 +14,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Warning
+import androidx.compose.material3.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -134,7 +135,9 @@ fun TransportationItem(
                 color = Color.Black,
                 fontSize = 18.sp,
             )
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(4.dp))
+            Divider(color = Color.Black, thickness = 1.dp)
+            Spacer(modifier = Modifier.height(4.dp))
             SemiBoldText(
                 text = speedAdvantage,
                 fontSize = 14.sp
@@ -142,5 +145,4 @@ fun TransportationItem(
         }
     }
 }
-
 
