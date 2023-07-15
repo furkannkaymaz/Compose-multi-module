@@ -25,8 +25,7 @@ The utils module contains general-purpose helper functions and tools. This modul
 
 ---> Development continue...
 
-### Technologies
-- The following technologies were used in this project:
+### Technologies and Features
 - Kotlin
 - Jetpack Compose 
 - Clean Architecture
@@ -34,12 +33,11 @@ The utils module contains general-purpose helper functions and tools. This modul
 - Kotlin DSL
 - Compose - Navigation
 - Compose - Deeplink
-- Compose - BottomNavigation
+- Compose - BottomNavigation (Control by screen)
 - Flow
 - DataStore
 - Kotlin Coroutines
 - DI (Hilt)
-- Unit Test
 - Extension Functions
 - Operator, infix funcitons
 - Generics
