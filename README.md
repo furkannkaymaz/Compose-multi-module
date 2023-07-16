@@ -32,7 +32,8 @@ The utils module contains general-purpose helper functions and tools. This modul
 - Multi-Module
 - Kotlin DSL
 - Compose - Navigation
-- Compose - Deeplink
+- Compose - Deeplink (args)
+- Compose - State hoisting
 - Compose - BottomNavigation (Control by screen)
 - WebView
 - Flow
