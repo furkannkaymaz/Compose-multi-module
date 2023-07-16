@@ -10,7 +10,6 @@ fun NavGraphBuilder.searchScreen(
     composable(
         route = Const.Route.searchRoute,
     ) { navBackStackEntry ->
-        val argument = navBackStackEntry.arguments?.getInt("id")
         SearchRoute(onItemClick = onItemClick)
     }
 }

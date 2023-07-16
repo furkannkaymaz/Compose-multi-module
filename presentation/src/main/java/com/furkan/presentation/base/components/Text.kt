@@ -1,6 +1,4 @@
 package com.furkan.presentation.base.components
-
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.runtime.Composable
