@@ -91,17 +91,17 @@ fun DetailItem(
     ) {
         NormalText(
             text = "EconomyPercentage: $economyPercentage",
-            fontSize = 18.sp
+            fontSize = 22.sp
         )
         Spacer(modifier = Modifier.height(8.dp))
         NormalText(
             text = "Environmental Impact: $environmentalImpact",
-            fontSize = 14.sp
+            fontSize = 18.sp
         )
         Spacer(modifier = Modifier.height(8.dp))
         NormalText(
             text = "Most Prefered Country: $mostPreferedCountry",
-            fontSize = 14.sp,
+            fontSize = 18.sp,
         )
     }
 }

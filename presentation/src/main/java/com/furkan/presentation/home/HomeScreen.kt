@@ -101,7 +101,7 @@ fun TransportationList(
     LazyColumn {
         items(transportationList) { item ->
             TransportationItem(
-                type = "Type : ${item.type}",
+                type = item.type,
                 speedAdvantage = "Speed Advantage : ${item.speedAdvantage}",
                 id = item.id,
                 transportationClick = transportationClick

@@ -26,6 +26,7 @@ fun WebScreen(url: String) {
             AndroidView(factory = { context ->
                 WebView(context).apply {
                     webViewClient = WebViewClient()
+                    settings.javaScriptEnabled = true
                     loadUrl(url)
                 }
             })
