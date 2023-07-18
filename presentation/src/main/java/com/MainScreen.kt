@@ -1,6 +1,5 @@
 package com
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -13,7 +12,7 @@ import com.furkan.presentation.navigation.BottomNavigation
 import com.furkan.presentation.navigation.BottomNavigationVisibility
 import com.furkan.presentation.navigation.NavGraph
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+
 @Composable
 fun MainScreenView() {
     val navController = rememberNavController()

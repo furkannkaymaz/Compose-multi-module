@@ -41,17 +41,17 @@ class SearchViewModel @Inject constructor(
     }
 
     fun onQueryTextChange(query: String) = viewModelScope.launch {
-        if (query.length > 2) {
+        if (query.length > 1) {
             setState(TransportationSearchState.Loading(true))
             delay(500)
-            searchSatellites(query)
+            searchTransportation(query)
         } else {
             setState(TransportationSearchState.Loading(true))
             getTransportations()
         }
     }
 
-    private fun searchSatellites(query: String) {
+    private fun searchTransportation(query: String) {
         viewModelScope.launch {
             searchTransportationUseCase.searchTransportationByType(query).collect() {
                 setState(TransportationSearchState.Loading(false))

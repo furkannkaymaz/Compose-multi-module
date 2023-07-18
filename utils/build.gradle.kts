@@ -6,6 +6,7 @@ plugins {
 }
 
 android {
+
     namespace = "${Config.applicationId}.utils"
 
 }

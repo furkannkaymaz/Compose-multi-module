@@ -7,6 +7,7 @@ plugins {
 }
 
 android {
+
     namespace = "${Config.applicationId}.data"
 
 }

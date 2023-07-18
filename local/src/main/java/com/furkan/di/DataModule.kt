@@ -28,7 +28,7 @@ object DataModule {
 
     @Singleton
     @Provides
-    fun providePreferenceStorage(providePreferencesDataStore: DataStore<Preferences>): com.furkan.repository.DataStoreRepository =
+    fun providePreferenceStorage(providePreferencesDataStore: DataStore<Preferences>): DataStoreRepository =
         DataStoreImpl(providePreferencesDataStore)
 
 }
