@@ -46,6 +46,13 @@ dependencies {
     implementation(Libs.Compose.composeHilt)
     implementation(Libs.Compose.composePagination)
 
+    //Test
+    testImplementation(Libs.Test.mockK)
+    testImplementation(Libs.Test.mockitoKotlin)
+    testImplementation(Libs.Test.JUnit)
+    testImplementation(Libs.Test.mockitoCore)
+    testImplementation(Libs.Test.coroutine)
+
     implementation(Libs.AndroidX.datastore)
 
     //Glide

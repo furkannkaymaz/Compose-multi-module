@@ -161,4 +161,28 @@ object Libs {
             append(Versions.Others.inject)
         }
     }
+
+    object Test {
+        val mockK = buildString {
+            append("junit:junit:")
+            append(Versions.Test.JUnit)
+        }
+        val JUnit = buildString {
+            append("io.mockk:mockk:")
+            append(Versions.Test.mockK)
+        }
+        val mockitoKotlin = buildString {
+            append("org.mockito.kotlin:mockito-kotlin:")
+            append(Versions.Test.mockitoKotlin)
+        }
+        val mockitoCore = buildString {
+            append("org.mockito:mockito-core:")
+            append(Versions.Test.mockitoCore)
+        }
+
+        val coroutine = buildString {
+            append("org.jetbrains.kotlinx:kotlinx-coroutines-test:")
+            append(Versions.Test.coroutine)
+        }
+    }
 }

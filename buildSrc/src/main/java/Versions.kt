@@ -54,4 +54,12 @@ object Versions {
         const val inject = "1"
         const val kotlinCompilerExtensionVersion = "1.4.2"
     }
+
+    object Test{
+        const val JUnit = "4.13.2"
+        const val mockK = "1.12.0"
+        const val mockitoKotlin = "4.0.0"
+        const val mockitoCore = "3.12.4"
+        const val coroutine = "1.5.2"
+    }
 }
