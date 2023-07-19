@@ -50,9 +50,9 @@ class HomeViewModelTest {
                 )
             ).asFlow()
         )
-        homeViewModel.setState(TransportationState.TransportationDataSuccess(transportationList))
 
         //when
+        homeViewModel.getTransportations()
         when (val state = homeViewModel.state.first()) {
             is TransportationState.Error -> {}
             is TransportationState.Loading -> {}
@@ -61,7 +61,7 @@ class HomeViewModelTest {
             }
         }
         //then
-        verify(getTransportationUseCase, times(1)).invoke()
+        verify(getTransportationUseCase, times(2)).invoke()
         assertEquals(transportationList, result)
     }
 
@@ -76,7 +76,7 @@ class HomeViewModelTest {
             ).asFlow()
         )
 
-        homeViewModel.setState(TransportationState.Error(errorText))
+        homeViewModel.getTransportations()
 
         when (val state = homeViewModel.state.first()) {
             is TransportationState.Error -> {
@@ -86,7 +86,7 @@ class HomeViewModelTest {
             is TransportationState.TransportationDataSuccess -> {}
         }
 
-        verify(getTransportationUseCase, times(1)).invoke()
+        verify(getTransportationUseCase, times(2)).invoke()
         assertEquals(errorText, result)
     }
 
