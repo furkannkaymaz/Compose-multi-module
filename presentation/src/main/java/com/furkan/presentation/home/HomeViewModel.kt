@@ -7,6 +7,7 @@ import com.furkan.uiModel.transportation.TransportationModelUi
 import com.furkan.usecase.GetTransportationUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import org.jetbrains.annotations.VisibleForTesting
 import javax.inject.Inject
 
 @HiltViewModel
@@ -20,6 +21,7 @@ class HomeViewModel @Inject constructor(
         getTransportations()
     }
 
+    @VisibleForTesting
     private fun getTransportations() {
         viewModelScope.launch {
             getTransportationUseCase.invoke().collect {

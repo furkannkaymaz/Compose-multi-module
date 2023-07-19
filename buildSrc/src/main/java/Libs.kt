@@ -179,10 +179,15 @@ object Libs {
             append("org.mockito:mockito-core:")
             append(Versions.Test.mockitoCore)
         }
+        val mockitoInline = buildString {
+            append("org.mockito:mockito-inline:")
+            append(Versions.Test.mockitoInline)
+        }
 
         val coroutine = buildString {
             append("org.jetbrains.kotlinx:kotlinx-coroutines-test:")
             append(Versions.Test.coroutine)
         }
+
     }
 }

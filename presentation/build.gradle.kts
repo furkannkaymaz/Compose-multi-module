@@ -15,7 +15,7 @@ android {
 
 
     composeOptions {
-        kotlinCompilerExtensionVersion =  Versions.Others.kotlinCompilerExtensionVersion
+        kotlinCompilerExtensionVersion = Versions.Others.kotlinCompilerExtensionVersion
     }
 
 }
@@ -52,6 +52,7 @@ dependencies {
     testImplementation(Libs.Test.JUnit)
     testImplementation(Libs.Test.mockitoCore)
     testImplementation(Libs.Test.coroutine)
+    testImplementation(Libs.Test.mockitoInline)
 
     implementation(Libs.AndroidX.datastore)
 

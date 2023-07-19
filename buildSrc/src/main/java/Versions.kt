@@ -61,5 +61,6 @@ object Versions {
         const val mockitoKotlin = "4.0.0"
         const val mockitoCore = "3.12.4"
         const val coroutine = "1.5.2"
+        const val mockitoInline = "2.13.0"
     }
 }
