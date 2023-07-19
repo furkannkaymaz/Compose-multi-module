@@ -31,6 +31,7 @@ The utils module contains general-purpose helper functions and tools. This modul
 - Clean Architecture
 - Multi-Module
 - Kotlin DSL
+- Unit Test (Mockito)
 - Compose - Navigation
 - Compose - Deeplink (args)
 - Compose - State hoisting
@@ -43,4 +44,3 @@ The utils module contains general-purpose helper functions and tools. This modul
 - Extension Functions
 - Operator, infix funcitons
 - Generics
-- Unit Test (Mockito)
