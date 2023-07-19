@@ -51,7 +51,7 @@ class SearchViewModel @Inject constructor(
         }
     }
 
-    private fun searchTransportation(query: String) {
+    fun searchTransportation(query: String) {
         viewModelScope.launch {
             searchTransportationUseCase.searchTransportationByType(query).collect() {
                 setState(TransportationSearchState.Loading(false))
