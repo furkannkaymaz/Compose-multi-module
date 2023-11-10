@@ -23,8 +23,6 @@ The core module encompasses common utility functions and tools used throughout t
 #### Utils
 The utils module contains general-purpose helper functions and tools. This module provides custom helper classes, data structures, utility functions, and other useful tools that are utilized throughout the project.
 
----> Development continue...
-
 ### Technologies and Features
 - Kotlin
 - Jetpack Compose 
